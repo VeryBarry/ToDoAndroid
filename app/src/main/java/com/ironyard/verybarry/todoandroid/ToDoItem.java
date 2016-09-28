@@ -12,9 +12,12 @@ public class ToDoItem {
         this.text = text;
         this.isDone = isDone;
     }
-
-
-
-
-
+    @Override
+    public String toString() {
+        String checkbox = " ";
+        if(isDone){
+            checkbox = "✓";
+        }
+        return String.format("%s %s", checkbox, text);
+    }
 }
